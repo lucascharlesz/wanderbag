@@ -11,6 +11,51 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :subscription_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :subscription_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :initial_date %>
+    <%= form.date_select :initial_date, id: :subscription_initial_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :final_date %>
+    <%= form.date_select :final_date, id: :subscription_final_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :smallbag_quantity %>
+    <%= form.number_field :smallbag_quantity, id: :subscription_smallbag_quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mediumbag_quantity %>
+    <%= form.number_field :mediumbag_quantity, id: :subscription_mediumbag_quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bigbag_quantity %>
+    <%= form.text_field :bigbag_quantity, id: :subscription_bigbag_quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :value %>
+    <%= form.text_field :value, id: :subscription_value %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_number %>
+    <%= form.number_field :phone_number, id: :subscription_phone_number %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

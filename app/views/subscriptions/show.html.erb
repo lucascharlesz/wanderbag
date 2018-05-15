@@ -1,4 +1,49 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Name:</strong>
+  <%= @subscription.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @subscription.email %>
+</p>
+
+<p>
+  <strong>Initial date:</strong>
+  <%= @subscription.initial_date %>
+</p>
+
+<p>
+  <strong>Final date:</strong>
+  <%= @subscription.final_date %>
+</p>
+
+<p>
+  <strong>Smallbag quantity:</strong>
+  <%= @subscription.smallbag_quantity %>
+</p>
+
+<p>
+  <strong>Mediumbag quantity:</strong>
+  <%= @subscription.mediumbag_quantity %>
+</p>
+
+<p>
+  <strong>Bigbag quantity:</strong>
+  <%= @subscription.bigbag_quantity %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @subscription.value %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @subscription.phone_number %>
+</p>
+
 <%= link_to 'Edit', edit_subscription_path(@subscription) %> |
 <%= link_to 'Back', subscriptions_path %>

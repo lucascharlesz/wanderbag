@@ -17,7 +17,7 @@ class SubscriptionsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create subscription" do
     assert_difference('Subscription.count') do
-      post subscriptions_url, params: { subscription: {  } }
+      post subscriptions_url, params: { subscription: { bigbag_quantity: @subscription.bigbag_quantity, email: @subscription.email, final_date: @subscription.final_date, initial_date: @subscription.initial_date, mediumbag_quantity: @subscription.mediumbag_quantity, name: @subscription.name, phone_number: @subscription.phone_number, smallbag_quantity: @subscription.smallbag_quantity, value: @subscription.value } }
     end
 
     assert_redirected_to subscription_url(Subscription.last)
@@ -34,7 +34,7 @@ class SubscriptionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update subscription" do
-    patch subscription_url(@subscription), params: { subscription: {  } }
+    patch subscription_url(@subscription), params: { subscription: { bigbag_quantity: @subscription.bigbag_quantity, email: @subscription.email, final_date: @subscription.final_date, initial_date: @subscription.initial_date, mediumbag_quantity: @subscription.mediumbag_quantity, name: @subscription.name, phone_number: @subscription.phone_number, smallbag_quantity: @subscription.smallbag_quantity, value: @subscription.value } }
     assert_redirected_to subscription_url(@subscription)
   end
 

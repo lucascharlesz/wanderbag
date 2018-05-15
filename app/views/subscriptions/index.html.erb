@@ -5,6 +5,15 @@
 <table>
   <thead>
     <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Initial date</th>
+      <th>Final date</th>
+      <th>Smallbag quantity</th>
+      <th>Mediumbag quantity</th>
+      <th>Bigbag quantity</th>
+      <th>Value</th>
+      <th>Phone number</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,6 +21,15 @@
   <tbody>
     <% @subscriptions.each do |subscription| %>
       <tr>
+        <td><%= subscription.name %></td>
+        <td><%= subscription.email %></td>
+        <td><%= subscription.initial_date %></td>
+        <td><%= subscription.final_date %></td>
+        <td><%= subscription.smallbag_quantity %></td>
+        <td><%= subscription.mediumbag_quantity %></td>
+        <td><%= subscription.bigbag_quantity %></td>
+        <td><%= subscription.value %></td>
+        <td><%= subscription.phone_number %></td>
         <td><%= link_to 'Show', subscription %></td>
         <td><%= link_to 'Edit', edit_subscription_path(subscription) %></td>
         <td><%= link_to 'Destroy', subscription, method: :delete, data: { confirm: 'Are you sure?' } %></td>

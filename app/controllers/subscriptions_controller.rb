@@ -69,6 +69,6 @@ class SubscriptionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def subscription_params
-      params.fetch(:subscription, {})
+      params.require(:subscription).permit(:name, :email, :initial_date, :final_date, :smallbag_quantity, :mediumbag_quantity, :bigbag_quantity, :value, :phone_number)
     end
 end
