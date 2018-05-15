@@ -1,3 +1,3 @@
-entrypoint: 'rails server -p 80'
+entrypoint: 'bundle exec rails server -p 80'
 env: flex
 runtime: ruby
