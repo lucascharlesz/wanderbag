@@ -1,7 +1,7 @@
 # How to start your application
 entrypoint: bundle exec rackup --port $PORT
 # Use App Engine flexible environment
-env: production
+env: flex
 # Use the supported Ruby runtime 
 runtime: ruby
 
