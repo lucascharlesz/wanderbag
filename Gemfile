@@ -33,6 +33,12 @@ gem 'jbuilder', '~> 2.5'
 # Bootstrap
 gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
 
+# Google Cloud
+gem "appengine", "~> 0.4.1"
+
+# PostgreSQL
+gem 'pg'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

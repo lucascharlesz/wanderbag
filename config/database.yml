@@ -21,9 +21,11 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
-
-flex:
-  <<: *default
-  database: db/flex.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+  username: "postgres"
+  password: "12345678"
+  database: "wanderbag-1"
+  host:   "/cloudsql/wanderbag1:southamerica-east1:wanderbag-1"
