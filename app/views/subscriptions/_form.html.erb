@@ -1,62 +1,112 @@
-<%= form_with(model: subscription, local: true) do |form| %>
-  <% if subscription.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(subscription.errors.count, "error") %> prohibited this subscription from being saved:</h2>
+<div class="section-top-border">
+  <div class=container>
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="offset-lg-2 col-lg-8 col-md-8">
+        <h3 class="mb-30">Formulário</h3>
+          <%= form_with(model: subscription, local: true) do |form| %>
+            <% if subscription.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(subscription.errors.count, "error") %> prohibited this subscription from being saved:</h2>
 
-      <ul>
-      <% subscription.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+                <ul>
+                <% subscription.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+                </ul>
+              </div>
+            <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :subscription_name %>
+            <div class="mt-10">
+              <div class="switch-wrap d-flex justify-content-between">
+                <%= form.label 'Nome' %>
+                <div class="input-group-icon">
+                  <div class="icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+                  <%= form.text_field :name, id: :subscription_name, placeholder: "Renato Baptista", class: "single-input" %>
+                </div>
+              </div>
+            </div>
+            <div class="mt-10">
+              <div class="switch-wrap d-flex justify-content-between">
+                <%= form.label 'E-Mail' %>
+                <div class="input-group-icon">
+                  <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                  <%= form.text_field :email, id: :subscription_email, placeholder: "renato.baptista@example.com", class: "single-input" %>
+                </div>
+              </div>
+            </div>
+            <div class="mt-10">
+              <div class="switch-wrap d-flex justify-content-between">
+                <%= form.label 'Data Retirada' %>
+                <div class="input-group-icon">
+                  <div class="icon"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                  <%= form.text_field :initial_date, id: :subscription_initial_date, placeholder: "Data Retirada: DD/MM/AAAA", class: "single-input" %>
+                </div>
+              </div>
+            </div>
+            <div class="mt-10">
+              <div class="switch-wrap d-flex justify-content-between">
+                <%= form.label 'Data Devolução' %>
+                <div class="input-group-icon">
+                  <div class="icon"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                  <%= form.text_field :final_date, id: :subscription_final_date, placeholder: "Data Devolução: DD/MM/AAAA", class: "single-input" %>
+                </div>
+              </div>
+            </div>
+            <div class="mt-10">
+            <div class="switch-wrap d-flex justify-content-between">
+                <%= form.label 'Mochila(s) Pequena(s)' %>
+                <div class="input-group-icon">
+                  <div class="icon"><i class="fa fa-shopping-bag" aria-hidden="true"></i></div>
+                  <%= form.number_field :smallbag_quantity, id: :subscription_smallbag_quantity, placeholder: "1", class: "single-input" %>
+                </div>
+              </div>
+            </div>
+            <div class="mt-10">
+              <div class="switch-wrap d-flex justify-content-between">
+                <%= form.label 'Mochila(s) Média(s)' %>
+                <div class="input-group-icon">
+                  <div class="icon"><i class="fa fa-briefcase" aria-hidden="true"></i></div>
+                  <%= form.number_field :mediumbag_quantity, id: :subscription_mediumbag_quantity, placeholder: "1", class: "single-input" %>
+                </div>
+              </div>
+            </div>
+            <div class="mt-10">
+              <div class="switch-wrap d-flex justify-content-between">
+                <%= form.label 'Mochila(s) Grande(s)' %>
+                <div class="input-group-icon">
+                  <div class="icon"><i class="fa fa-suitcase" aria-hidden="true"></i></div>
+                  <%= form.number_field :bigbag_quantity, id: :subscription_bigbag_quantity, placeholder: "1", class: "single-input" %>
+                </div>
+              </div>
+            </div>
+            <div class="mt-10">
+              <div class="switch-wrap d-flex justify-content-between">
+                <%= form.label 'Valor Total' %>
+                <div class="input-group-icon">
+                  <div class="icon"><i class="fa fa-money" aria-hidden="true"></i></div>
+                  <%= form.text_field :value, id: :subscription_value, placeholder: "R$ 65,00", class: "single-input" %>
+                </div>
+              </div>
+            </div>
+            <div class="mt-10">
+              <div class="switch-wrap d-flex justify-content-between">
+                <%= form.label 'Nº Telefone' %>
+                <div class="input-group-icon">
+                  <div class="icon"><i class="fa fa-mobile" aria-hidden="true"></i></div>
+                  <%= form.number_field :phone_number, id: :subscription_phone_number, placeholder: "(41) 3333-3333", class: "single-input" %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-2">
+          </div>
+          <div class="actions">
+            <div class="button-group-area mt-40">
+              <%= form.submit class: "genric-btn success circle", value: "Confirmar Cadastro!"%>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :subscription_email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :initial_date %>
-    <%= form.date_select :initial_date, id: :subscription_initial_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :final_date %>
-    <%= form.date_select :final_date, id: :subscription_final_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :smallbag_quantity %>
-    <%= form.number_field :smallbag_quantity, id: :subscription_smallbag_quantity %>
-  </div>
-
-  <div class="field">
-    <%= form.label :mediumbag_quantity %>
-    <%= form.number_field :mediumbag_quantity, id: :subscription_mediumbag_quantity %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bigbag_quantity %>
-    <%= form.text_field :bigbag_quantity, id: :subscription_bigbag_quantity %>
-  </div>
-
-  <div class="field">
-    <%= form.label :value %>
-    <%= form.text_field :value, id: :subscription_value %>
-  </div>
-
-  <div class="field">
-    <%= form.label :phone_number %>
-    <%= form.number_field :phone_number, id: :subscription_phone_number %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
