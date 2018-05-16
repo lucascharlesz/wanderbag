@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Subscription.create!(
+  name: "Lucas",
+  email: "lucascharlesz@hotmail.com",
+  smallbag_quantity: 1,
+  mediumbag_quantity: 1,
+  bigbag_quantity: 1,
+  value: 1
+)
