@@ -1,0 +1,44 @@
+<header id="header" id="home">
+  <div class="container">
+    <div class="row align-items-center justify-content-between d-flex">
+      <div id="logo">
+        <a href="/"><img src="/template/img/logo.png" alt="" title="" /></a>
+      </div>
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li >
+          <li class="menu-active">
+            <a>
+              <%= link_to 'Home', home_index_url(:anchor => "home") %>
+            </a>
+          </li>
+          <li>
+            <a>
+              <%= link_to 'We Offer', home_index_url(:anchor => "offer") %>
+            </a>
+          </li>
+          <li>
+            <a>
+              <%= link_to 'About', home_index_url(:anchor => "about") %>
+            </a>
+          </li>
+          <li>
+            <a>
+              <%= link_to 'Project', home_index_url(:anchor => "project") %>
+            </a>
+          </li>
+          <li>
+            <a>
+              <%= link_to 'Price', home_index_url(:anchor => "price") %>
+            </a>
+          </li>
+          <li>
+            <a>
+              <%= link_to 'Rent a Bag', subscriptions_url %>
+            </a>
+          </li>
+        </ul>
+      </nav><!-- #nav-menu-container -->		    		
+    </div>
+  </div>
+</header><!-- #header -->	
