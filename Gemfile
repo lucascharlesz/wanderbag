@@ -34,6 +34,10 @@ gem 'jquery-rails'
 # Bootstrap
 gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
 
+# Sweet Alert
+gem 'sweetalert-rails'
+
+
 # Google Cloud
 gem "appengine", "~> 0.4.1"
 

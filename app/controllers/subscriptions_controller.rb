@@ -28,7 +28,10 @@ class SubscriptionsController < ApplicationController
 
     respond_to do |format|
       if @subscription.save
-        format.html { redirect_to @subscription, notice: 'Subscription was successfully created.' }
+        format.html { redirect_to home_index_url, 
+          notice: notification_alert('success', 
+                                     'Cadastro efetuado com sucesso!',
+                                     "Nossos serviços ainda estão indisponíveis. Mas, fique tranquilo. Assim que possível, entraremos em contato com você, e lhe informaremos sobre as novidades e todas as vantagens de nosso produto.") }
         format.json { render :show, status: :created, location: @subscription }
       else
         format.html { render :new }

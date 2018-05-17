@@ -52,6 +52,17 @@
     <script src="/template/js/jquery.nice-select.min.js"></script>			
     <script src="/template/js/parallax.min.js"></script>		
     <script src="/template/js/mail-script.js"></script>	
-    <script src="/template/js/main.js"></script>	
+    <script src="/template/js/main.js"></script>
+    <script>
+      $( document ).ready(function() {
+          <% if notice %>
+              notice = <%= raw notice.to_json %>
+              if (notice != "") {
+                  sweetAlert(notice);
+                  notice = "";
+              }
+          <% end %>
+      })
+    </script>
   </body>
 </html>

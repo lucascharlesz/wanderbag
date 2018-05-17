@@ -12,5 +12,8 @@
 //
 //= require jquery
 //= require bootstrap
+//= jquery-ujs
 //= require rails-ujs
 //= require_tree .
+//= require sweetalert
+

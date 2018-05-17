@@ -6,36 +6,23 @@
       </div>
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li >
           <li class="menu-active">
-            <a>
-              <%= link_to 'Home', home_index_url(:anchor => "home") %>
-            </a>
+              <%= link_to 'Home', home_index_url(:anchor => "home"), class: "genric-btn primary-border small" %>
           </li>
           <li>
-            <a>
-              <%= link_to 'We Offer', home_index_url(:anchor => "offer") %>
-            </a>
+              <%= link_to 'We Offer', home_index_url(:anchor => "offer"), class: "genric-btn primary-border small" %>
           </li>
           <li>
-            <a>
-              <%= link_to 'About', home_index_url(:anchor => "about") %>
-            </a>
+              <%= link_to 'About', home_index_url(:anchor => "about"), class: "genric-btn primary-border small" %>
           </li>
           <li>
-            <a>
-              <%= link_to 'Project', home_index_url(:anchor => "project") %>
-            </a>
+              <%= link_to 'Project', home_index_url(:anchor => "project"), class: "genric-btn primary-border small" %>
           </li>
           <li>
-            <a>
-              <%= link_to 'Price', home_index_url(:anchor => "price") %>
-            </a>
+              <%= link_to 'Price', home_index_url(:anchor => "price"), class: "genric-btn primary-border small" %>
           </li>
           <li>
-            <a>
-              <%= link_to 'Rent a Bag', new_subscription_url %>
-            </a>
+              <%= link_to 'Rent a Bag', new_subscription_url, class: 'genric-btn primary small' %>
           </li>
         </ul>
       </nav><!-- #nav-menu-container -->		    		
