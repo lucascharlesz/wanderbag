@@ -2348,7 +2348,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .video-area {
   padding: 200px 0 200px 0;
   position: relative;
-  background: url(../img/video-bg.jpg) no-repeat center center/cover;
+  background: url(../img/video-bg.png) no-repeat center center/cover;
 }
 
 .video-area .overlay-bg {
